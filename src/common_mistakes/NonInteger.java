@@ -14,7 +14,7 @@ public class NonInteger {
     @Test
     public void test(){
         System.out.println((1/49)*49);
-        Assertions.assertEquals(1,((1/49)*49));
+        Assertions.assertNotEquals(1,((1/49)*49));
     }
 
 }
