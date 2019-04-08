@@ -12,9 +12,15 @@ public class NonInteger {
         nonInteger=new NonInteger();
     }
     @Test
-    public void test(){
+    public void testForWrongImplementation(){
         System.out.println((1/49)*49);
         Assertions.assertNotEquals(1,((1/49)*49));
+    }
+    @Test
+    public void testCorrectWay(){
+        float res=(float) 1/49;
+        System.out.println(res);
+        Assertions.assertEquals(1,res*49);
     }
 
 }
