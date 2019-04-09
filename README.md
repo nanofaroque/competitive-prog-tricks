@@ -84,3 +84,36 @@ public class IntegerOverflow {
 }
 
 ```
+
+### Rational Numbers
+```$xslt
+Assertions.assertNotEquals(1,((1/49)*49));
+```
+Why? Because 1/49 grows so fast. Ratio of two rational number grows so fast and does not fit into an integer.
+To have better precision, we should use **float**
+
+Here is a full code snippet
+
+```$xslt
+
+public class NonInteger {
+    NonInteger nonInteger;
+    @BeforeEach
+    public void init(){
+        nonInteger=new NonInteger();
+    }
+    @Test
+    public void testForWrongImplementation(){
+        System.out.println((1/49)*49);
+        Assertions.assertNotEquals(1,((1/49)*49));
+    }
+    @Test
+    public void testCorrectWay(){
+        float res=(float) 1/49;
+        System.out.println(res);
+        Assertions.assertEquals(1,res*49);
+    }
+
+}
+
+```
