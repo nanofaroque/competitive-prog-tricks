@@ -113,7 +113,8 @@ public class NonInteger {
         System.out.println(res);
         Assertions.assertEquals(1,res*49);
     }
-
 }
 
 ```
+## Competitive programming basics
+1. https://cp-algorithms.com
